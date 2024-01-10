@@ -1,9 +1,9 @@
-p::after {
+/* p::after {
   content: 'Nihat';
   background-color: red;
   display: block;
   width: 10rem;
-}    
+}     */
 #contanier {
   width: 5px;
   height: 5px;
@@ -64,11 +64,39 @@ p::after {
   
   transition: background-color 600ms ease, color 600ms ease, border 600ms ease, transform 600ms ease;
 }
-.button:focus,
-.button:hover {
 
-  transform: scale(1.10);
+.button-text {
+  color: white;
+}
+.button-text::after {
+  content: "";
+  display: flex;
+  position: relative;
+  height: 5px;
+  width: 90px;
+  background-color: lightsalmon;
+  transform: scale(0);
+  transform-origin: left;
+
+  transition: transform 600ms ease;
+  
+}
+
+.button:hover .button-text {
   color: black;
+  
+}
+
+.button:hover .button-text::after {
+  transform: scale(1);
+  background-color: purple;
+  
+}
+
+
+.button:hover {
+  transform: scale(1.10);
+  
   border: none;
   background-color: lightgreen;
 }
