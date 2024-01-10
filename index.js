@@ -8,14 +8,40 @@ const resetCart = document.getElementById('reset-cart');
 const input = document.getElementById('input');
 const click = document.getElementById('click');
 
+const dot = document.getElementById('contanier');
+
 
 click.addEventListener('click', e => {
-  if (input.value >= 18) {
-    console.log('you selected');
+  // Get the input value
+  const inputValue = input.value;
+
+  // Try to parse the input value as an integer
+  const parsedValue = parseInt(inputValue);
+
+  // Check if the parsedValue is a valid integer
+  if (!isNaN(parsedValue) && Number.isInteger(parsedValue)) {
+    console.log('You entered a valid integer.');
   } else {
-    console.log('you are too young for that');
+    console.log('Please enter a valid integer.');
   }
-})
+});
+
+
+window.addEventListener('mousemove', e => {
+  let x = e.clientX;
+  let y = e.clientY;
+
+  // Set the dot position
+  dot.style.left = x + 'px';
+  dot.style.top = y + 'px';
+
+  dot.animate({
+    left: x , top: y},
+    {duration:4000,
+    easing:ease}
+  )
+});
+
 
 
 

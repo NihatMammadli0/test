@@ -1,0 +1,70 @@
+p::after {
+  content: 'Nihat';
+  background-color: red;
+  display: block;
+  width: 10rem;
+}    
+#contanier {
+  width: 5px;
+  height: 5px;
+  background-color: blue;
+  position: absolute;
+}
+.contanier2 {
+  display: flex; 
+  background-color: white;
+  color: red;
+  /* justify-content: center; */
+  /* align-items: center; */
+  border: solid; 
+  border-width: 2px; 
+  width: 500px;
+  margin: 0;
+  padding: 0;
+  height: 62px;
+  /* transition-duration: 1500ms; */
+
+  transition: background-color 1600ms ease-in, transform 1600ms ease-in, color 1600ms ease-in;
+}
+.contanier2:hover {
+  color: white;
+  background-color: black;
+  transform: rotate(360deg);
+}
+.contanier2 ul {
+  padding-left: 1.3rem;
+  /* flex-grow: 1; */
+  /* flex-shrink: 0; */
+  /* flex-basis: auto; */
+  border: solid;
+  border-width: 1px;
+  background-color: lightsalmon;
+}
+.text {
+  margin: 10rem;
+}
+.text::after {
+  content: "";
+  position: absolute;
+  display: flex;
+  background-color: greenyellow;
+  height: 5px;
+  width: 200px;
+}
+.button {
+  background-color: black;
+  color: white;
+  width: 100px;
+  height: 50px;
+  transform: translateY(-75px);
+  transform: translateX(75px);
+  
+  transition: background-color 600ms ease, color 600ms ease, border 600ms ease;
+}
+.button:focus,
+.button:active,
+.button:hover {
+  color: black;
+  border: none;
+  background-color: lightgreen;
+}
