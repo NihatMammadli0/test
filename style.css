@@ -56,14 +56,18 @@ p::after {
   color: white;
   width: 100px;
   height: 50px;
-  transform: translateY(-75px);
-  transform: translateX(75px);
+  /* transform: translateY(-75px);
+  transform: translateX(75px); */
+  margin-left: 4rem;
+  margin-bottom: 4rem;
+  transform: scale(1);
   
-  transition: background-color 600ms ease, color 600ms ease, border 600ms ease;
+  transition: background-color 600ms ease, color 600ms ease, border 600ms ease, transform 600ms ease;
 }
 .button:focus,
-.button:active,
 .button:hover {
+
+  transform: scale(1.10);
   color: black;
   border: none;
   background-color: lightgreen;
